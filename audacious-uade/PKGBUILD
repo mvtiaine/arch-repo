@@ -1,5 +1,5 @@
 pkgname=audacious-uade
-pkgver=0.11.2
+pkgver=0.11.3
 pkgrel=1
 pkgdesc="UADE plugin for Audacious music player"
 arch=('x86_64' 'aarch64')
@@ -8,7 +8,7 @@ license=('GPL')
 depends=('audacious' 'libbsd')
 makedepends=('pkg-config')
 source=(https://github.com/mvtiaine/$pkgname/releases/download/$pkgver/$pkgname-$pkgver.tar.bz2)
-sha256sums=('d72dea78026b42f3981ec1c5ea4739eb2cf9bab8fbe660288244ee09b800e8e1')
+sha256sums=('7a9adc203d2113eb88fef9cb1aa463076b90a314de944690330d779b588bbc7f')
 
 build() {
 	cd "$srcdir/$pkgname-$pkgver"
