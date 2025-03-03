@@ -1,18 +1,26 @@
 pkgname=audacious-uade
-pkgver=0.12.4
+pkgver=0.13.0
 pkgrel=1
-pkgdesc="UADE plugin for Audacious music player"
+pkgdesc="UADE plugin for Audacious and DeaDBeeF"
 arch=('any')
 url="https://github.com/mvtiaine/audacious-uade"
 license=('GPL')
-depends=('audacious')
+depends=('audacious' 'libopenmpt')
+# libxmp and deadbeef in AUR
+optdepends=(
+    'libxmp: support for additional formats'
+    'deadbeef: DeaDBeeF plugin'
+)
 makedepends=('which' 'make' 'pkg-config')
 source=(https://github.com/mvtiaine/$pkgname/releases/download/$pkgver/$pkgname-$pkgver.tar.bz2)
-sha256sums=('3d1b5f5dc42e04f9cc8c355b4783644507dcc36e13ac7e2662cad3b84432ff91')
+sha256sums=('d656a44ded34ba63c937196b9207e22b3d4d727fbd7839fe1885c2061a32db0d')
 
 build() {
 	cd "$srcdir/$pkgname-$pkgver"
-	./configure --enable-plugin-audacious=yes --with-static-stdlibs=no --prefix=/usr
+	./configure \
+		--enable-plugin-audacious=yes \
+		--with-static-stdlibs=no \
+		--prefix=/usr
 	make -j
 }
 
