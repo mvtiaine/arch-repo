@@ -1,5 +1,5 @@
 pkgname=audacious-uade
-pkgver=0.13.1
+pkgver=0.13.2
 pkgrel=1
 pkgdesc="UADE plugin for Audacious and DeaDBeeF"
 arch=('any')
@@ -13,7 +13,7 @@ optdepends=(
 )
 makedepends=('which' 'make' 'pkg-config')
 source=(https://github.com/mvtiaine/$pkgname/releases/download/$pkgver/$pkgname-$pkgver.tar.bz2)
-sha256sums=('8f308dc9e5bdcc8bb6cc49dee9ce4acf93d20c02026fff9043975be3937fd393')
+sha256sums=('f98be9164be6954de67988306401a1dc3b6157a4c08f2f14f5f2e855bbd9451d')
 
 build() {
 	cd "$srcdir/$pkgname-$pkgver"
